@@ -34,12 +34,12 @@ nock('https://management.azure.com:443')
   'content-length': '392',
   'content-type': 'application/json; charset=utf-8',
   expires: '-1',
-  'x-ms-request-id': 'westus:5878b52c-6c87-497d-8fb1-74daad31a592',
-  'x-ms-ratelimit-remaining-subscription-writes': '1199',
-  'x-ms-correlation-request-id': '180531af-b38e-4c15-b571-546ea3db4adf',
-  'x-ms-routing-request-id': 'WESTUS:20160408T205428Z:180531af-b38e-4c15-b571-546ea3db4adf',
+  'x-ms-request-id': 'westus:ca07b9bd-77c0-46b9-84cd-71f74a5c1dd8',
+  'x-ms-ratelimit-remaining-subscription-writes': '1198',
+  'x-ms-correlation-request-id': '0c929378-77f3-449f-bd2e-41af952e2795',
+  'x-ms-routing-request-id': 'WESTUS:20160408T223657Z:0c929378-77f3-449f-bd2e-41af952e2795',
   'strict-transport-security': 'max-age=31536000; includeSubDomains',
-  date: 'Fri, 08 Apr 2016 20:54:28 GMT' });
+  date: 'Fri, 08 Apr 2016 22:36:56 GMT' });
  return result; },
 function (nock) { 
 var result = 
@@ -51,44 +51,78 @@ nock('https://management.azure.com:443')
   'content-type': 'application/json; charset=utf-8',
   expires: '-1',
   vary: 'Accept-Encoding',
-  'x-ms-request-id': 'westus:d5392b57-8907-44c9-8248-94fca131cc0c',
+  'x-ms-request-id': 'westus:c72ad7c4-a4c1-4262-a0fa-f6ea872bba6f',
   'x-ms-ratelimit-remaining-subscription-reads': '14998',
-  'x-ms-correlation-request-id': 'abf851c3-83ea-4b01-a5bb-71103f89acd0',
-  'x-ms-routing-request-id': 'WESTUS:20160408T205428Z:abf851c3-83ea-4b01-a5bb-71103f89acd0',
+  'x-ms-correlation-request-id': '29212da0-def7-430a-83b7-6e9ed041a7d3',
+  'x-ms-routing-request-id': 'WESTUS:20160408T223657Z:29212da0-def7-430a-83b7-6e9ed041a7d3',
   'strict-transport-security': 'max-age=31536000; includeSubDomains',
-  date: 'Fri, 08 Apr 2016 20:54:27 GMT' });
+  date: 'Fri, 08 Apr 2016 22:36:57 GMT' });
  return result; },
 function (nock) { 
 var result = 
 nock('https://management.azure.com:443')
-  .get('/subscriptions/9167af2d-c13e-4d34-9a57-8f37dba6ff31/providers/Microsoft.Authorization/policydefinitions?api-version=2015-10-01-preview')
-  .reply(200, "{\"value\":[{\"properties\":{\"displayName\":\"Allow resource creation only in India data centers\",\"policyType\":\"BuiltIn\",\"description\":\"Allows resource creation in the following locations only: West India, South India, Central India\",\"policyRule\":{\"if\":{\"not\":{\"field\":\"location\",\"in\":[\"westindia\",\"southindia\",\"centralindia\"]}},\"then\":{\"effect\":\"Deny\"}}},\"id\":\"/providers/Microsoft.Authorization/policyDefinitions/5ee85ce5-e7eb-44d6-b4a2-32a24be1ca54\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"5ee85ce5-e7eb-44d6-b4a2-32a24be1ca54\"},{\"properties\":{\"displayName\":\"Allow resource creation only in Japan data centers\",\"policyType\":\"BuiltIn\",\"description\":\"Allows resource creation in the following locations only: Japan East, Japan West\",\"policyRule\":{\"if\":{\"not\":{\"field\":\"location\",\"in\":[\"japaneast\",\"japanwest\"]}},\"then\":{\"effect\":\"Deny\"}}},\"id\":\"/providers/Microsoft.Authorization/policyDefinitions/6fdb9205-3462-4cfc-87d8-16c7860b53f4\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"6fdb9205-3462-4cfc-87d8-16c7860b53f4\"},{\"properties\":{\"displayName\":\"Allow resource creation only in European data centers\",\"policyType\":\"BuiltIn\",\"description\":\"Allows resource creation in the following locations only: North Europe, West Europe\",\"policyRule\":{\"if\":{\"not\":{\"field\":\"location\",\"in\":[\"northeurope\",\"westeurope\"]}},\"then\":{\"effect\":\"Deny\"}}},\"id\":\"/providers/Microsoft.Authorization/policyDefinitions/94c19f19-8192-48cd-a11b-e37099d3e36b\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"94c19f19-8192-48cd-a11b-e37099d3e36b\"},{\"properties\":{\"displayName\":\"Allow resource creation only in United States data centers\",\"policyType\":\"BuiltIn\",\"description\":\"Allows resource creation in the following locations only: Central US, East US, East US2, North Central US, South Central US, West US\",\"policyRule\":{\"if\":{\"not\":{\"field\":\"location\",\"in\":[\"centralus\",\"eastus\",\"eastus2\",\"northcentralus\",\"southcentralus\",\"westus\"]}},\"then\":{\"effect\":\"Deny\"}}},\"id\":\"/providers/Microsoft.Authorization/policyDefinitions/983211ba-f348-4758-983b-21fa29294869\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"983211ba-f348-4758-983b-21fa29294869\"},{\"properties\":{\"displayName\":\"Allow resource creation if 'environment' tag value in allowed values\",\"policyType\":\"BuiltIn\",\"description\":\"Allows resource creation if the 'environment' tag is set to one of the following values: production, dev, test, staging\",\"policyRule\":{\"if\":{\"not\":{\"field\":\"tags.environment\",\"in\":[\"production\",\"dev\",\"test\",\"staging\"]}},\"then\":{\"effect\":\"Deny\"}}},\"id\":\"/providers/Microsoft.Authorization/policyDefinitions/ac7e5fc0-c029-4b12-91d4-a8500ce697f9\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"ac7e5fc0-c029-4b12-91d4-a8500ce697f9\"},{\"properties\":{\"displayName\":\"Allow resource creation only in Asia data centers\",\"policyType\":\"BuiltIn\",\"description\":\"Allows resource creation in the following locations only: East Asia, Southeast Asia, West India, South India, Central India, Japan East, Japan West\",\"policyRule\":{\"if\":{\"not\":{\"field\":\"location\",\"in\":[\"eastasia\",\"southeastasia\",\"westindia\",\"southindia\",\"centralindia\",\"japaneast\",\"japanwest\"]}},\"then\":{\"effect\":\"Deny\"}}},\"id\":\"/providers/Microsoft.Authorization/policyDefinitions/c1b9cbed-08e3-427d-b9ce-7c535b1e9b94\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"c1b9cbed-08e3-427d-b9ce-7c535b1e9b94\"},{\"properties\":{\"displayName\":\"Allow resource creation if 'department' tag set\",\"policyType\":\"BuiltIn\",\"description\":\"Allows resource creation only if the 'department' tag is set\",\"policyRule\":{\"if\":{\"not\":{\"field\":\"tags\",\"containsKey\":\"department\"}},\"then\":{\"effect\":\"Deny\"}}},\"id\":\"/providers/Microsoft.Authorization/policyDefinitions/cd8dc879-a2ae-43c3-8211-1877c5755064\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"cd8dc879-a2ae-43c3-8211-1877c5755064\"},{\"properties\":{\"displayName\":\"Allow resource creation only in Japan data centers\",\"policyType\":\"BuiltIn\",\"description\":\"Allows resource creation in the following locations only: Japan East, Japan West\",\"policyRule\":{\"if\":{\"not\":{\"field\":\"location\",\"in\":[\"japaneast\",\"japanwest\"]}},\"then\":{\"effect\":\"Deny\"}}},\"id\":\"/providers/Microsoft.Authorization/policyDefinitions/e01598e8-6538-41ed-95e8-8b29746cd697\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"e01598e8-6538-41ed-95e8-8b29746cd697\"},{\"properties\":{\"policyType\":\"Custom\",\"policyRule\":{\"if\":{\"not\":{\"field\":\"tags.costCenter\",\"in\":[\"department1\",\"department2\",\"department3\"]}},\"then\":{\"effect\":\"deny\"}}},\"id\":\"/subscriptions/9167af2d-c13e-4d34-9a57-8f37dba6ff31/providers/Microsoft.Authorization/policyDefinitions/CostCenterTagPolicy\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"CostCenterTagPolicy\"},{\"properties\":{\"policyType\":\"Custom\",\"policyRule\":{\"if\":{\"not\":{\"field\":\"tags.costCenter\",\"in\":[\"department1\",\"department2\",\"department3\"]}},\"then\":{\"effect\":\"deny\"}}},\"id\":\"/subscriptions/9167af2d-c13e-4d34-9a57-8f37dba6ff31/providers/Microsoft.Authorization/policyDefinitions/CostCenterTagPolicy2\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"CostCenterTagPolicy2\"},{\"properties\":{\"policyType\":\"Custom\",\"policyRule\":{\"if\":{\"field\":\"tags.costCenter\",\"equals\":\"department1\"},\"then\":{\"effect\":\"audit\"}}},\"id\":\"/subscriptions/9167af2d-c13e-4d34-9a57-8f37dba6ff31/providers/Microsoft.Authorization/policyDefinitions/department1AuditPolicy\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"department1AuditPolicy\"},{\"properties\":{\"displayName\":\"myPolicy\",\"policyType\":\"Custom\",\"policyRule\":{\"if\":{\"source\":\"action\",\"equals\":\"Microsoft.Storage/storageAccounts/write\"},\"then\":{\"effect\":\"deny\"}}},\"id\":\"/subscriptions/9167af2d-c13e-4d34-9a57-8f37dba6ff31/providers/Microsoft.Authorization/policyDefinitions/testPolicyDefinition\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"testPolicyDefinition\"},{\"properties\":{\"displayName\":\"test123\",\"policyType\":\"Custom\",\"description\":\"test123\",\"policyRule\":{\"If\":{\"source\":\"action\",\"equals\":\"Microsoft.Storage/storageAccounts/write\"},\"then\":{\"effect\":\"deny\"}}},\"id\":\"/subscriptions/9167af2d-c13e-4d34-9a57-8f37dba6ff31/providers/Microsoft.Authorization/policyDefinitions/testVivekNewPolicy\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"testVivekNewPolicy\"}]}", { 'cache-control': 'no-cache',
-  pragma: 'no-cache',
-  'content-length': '6285',
-  'content-type': 'application/json; charset=utf-8',
-  expires: '-1',
-  vary: 'Accept-Encoding',
-  'x-ms-request-id': 'westus:648932c2-df0a-457b-80e2-92ae85cc16eb',
-  'x-ms-ratelimit-remaining-subscription-reads': '14998',
-  'x-ms-correlation-request-id': 'a421f446-e8a1-416b-9aeb-ceaf2f3a1177',
-  'x-ms-routing-request-id': 'WESTUS:20160408T205428Z:a421f446-e8a1-416b-9aeb-ceaf2f3a1177',
-  'strict-transport-security': 'max-age=31536000; includeSubDomains',
-  date: 'Fri, 08 Apr 2016 20:54:28 GMT' });
- return result; },
-function (nock) { 
-var result = 
-nock('https://management.azure.com:443')
-  .delete('/subscriptions/9167af2d-c13e-4d34-9a57-8f37dba6ff31/providers/Microsoft.Authorization/policydefinitions/testPolicyDefinition?api-version=2015-10-01-preview')
+  .get('/subscriptions/9167af2d-c13e-4d34-9a57-8f37dba6ff31/providers/Microsoft.Authorization/policydefinitions/testPolicyDefinition?api-version=2015-10-01-preview')
   .reply(200, "{\"properties\":{\"displayName\":\"myPolicy\",\"policyType\":\"Custom\",\"policyRule\":{\"if\":{\"source\":\"action\",\"equals\":\"Microsoft.Storage/storageAccounts/write\"},\"then\":{\"effect\":\"deny\"}}},\"id\":\"/subscriptions/9167af2d-c13e-4d34-9a57-8f37dba6ff31/providers/Microsoft.Authorization/policyDefinitions/testPolicyDefinition\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"testPolicyDefinition\"}", { 'cache-control': 'no-cache',
   pragma: 'no-cache',
   'content-length': '392',
   'content-type': 'application/json; charset=utf-8',
   expires: '-1',
   vary: 'Accept-Encoding',
-  'x-ms-request-id': 'westus:1c70906b-fc1e-42b6-a10c-9b311c27e686',
-  'x-ms-ratelimit-remaining-subscription-writes': '1199',
-  'x-ms-correlation-request-id': '2843ca18-10f4-4eda-bd89-b294b083c838',
-  'x-ms-routing-request-id': 'WESTUS:20160408T205429Z:2843ca18-10f4-4eda-bd89-b294b083c838',
+  'x-ms-request-id': 'westus:0baed0ad-c36d-4654-9817-5f1b71bf4aa7',
+  'x-ms-ratelimit-remaining-subscription-reads': '14998',
+  'x-ms-correlation-request-id': 'd32671e7-1ea6-413d-8932-bc78ed1f8bb3',
+  'x-ms-routing-request-id': 'WESTUS:20160408T223658Z:d32671e7-1ea6-413d-8932-bc78ed1f8bb3',
   'strict-transport-security': 'max-age=31536000; includeSubDomains',
-  date: 'Fri, 08 Apr 2016 20:54:29 GMT' });
+  date: 'Fri, 08 Apr 2016 22:36:57 GMT' });
+ return result; },
+function (nock) { 
+var result = 
+nock('https://management.azure.com:443')
+  .filteringRequestBody(function (path) { return '*';})
+.put('/subscriptions/9167af2d-c13e-4d34-9a57-8f37dba6ff31/providers/Microsoft.Authorization/policydefinitions/testPolicyDefinition?api-version=2015-10-01-preview', '*')
+  .reply(201, "{\"properties\":{\"displayName\":\"myNewPolicy\",\"policyType\":\"Custom\",\"policyRule\":{\"if\":{\"source\":\"action\",\"equals\":\"Microsoft.Storage/storageAccounts/write\"},\"then\":{\"effect\":\"deny\"}}},\"id\":\"/subscriptions/9167af2d-c13e-4d34-9a57-8f37dba6ff31/providers/Microsoft.Authorization/policyDefinitions/testPolicyDefinition\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"testPolicyDefinition\"}", { 'cache-control': 'no-cache',
+  pragma: 'no-cache',
+  'content-length': '395',
+  'content-type': 'application/json; charset=utf-8',
+  expires: '-1',
+  'x-ms-request-id': 'westus:34c7d8e6-fa1f-40cf-9873-85b8cfc36a0b',
+  'x-ms-ratelimit-remaining-subscription-writes': '1199',
+  'x-ms-correlation-request-id': '96af10a9-e85c-4355-8267-f31754c694f4',
+  'x-ms-routing-request-id': 'WESTUS:20160408T223701Z:96af10a9-e85c-4355-8267-f31754c694f4',
+  'strict-transport-security': 'max-age=31536000; includeSubDomains',
+  date: 'Fri, 08 Apr 2016 22:37:01 GMT' });
+ return result; },
+function (nock) { 
+var result = 
+nock('https://management.azure.com:443')
+  .get('/subscriptions/9167af2d-c13e-4d34-9a57-8f37dba6ff31/providers/Microsoft.Authorization/policydefinitions?api-version=2015-10-01-preview')
+  .reply(200, "{\"value\":[{\"properties\":{\"displayName\":\"Allow resource creation only in India data centers\",\"policyType\":\"BuiltIn\",\"description\":\"Allows resource creation in the following locations only: West India, South India, Central India\",\"policyRule\":{\"if\":{\"not\":{\"field\":\"location\",\"in\":[\"westindia\",\"southindia\",\"centralindia\"]}},\"then\":{\"effect\":\"Deny\"}}},\"id\":\"/providers/Microsoft.Authorization/policyDefinitions/5ee85ce5-e7eb-44d6-b4a2-32a24be1ca54\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"5ee85ce5-e7eb-44d6-b4a2-32a24be1ca54\"},{\"properties\":{\"displayName\":\"Allow resource creation only in Japan data centers\",\"policyType\":\"BuiltIn\",\"description\":\"Allows resource creation in the following locations only: Japan East, Japan West\",\"policyRule\":{\"if\":{\"not\":{\"field\":\"location\",\"in\":[\"japaneast\",\"japanwest\"]}},\"then\":{\"effect\":\"Deny\"}}},\"id\":\"/providers/Microsoft.Authorization/policyDefinitions/6fdb9205-3462-4cfc-87d8-16c7860b53f4\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"6fdb9205-3462-4cfc-87d8-16c7860b53f4\"},{\"properties\":{\"displayName\":\"Allow resource creation only in European data centers\",\"policyType\":\"BuiltIn\",\"description\":\"Allows resource creation in the following locations only: North Europe, West Europe\",\"policyRule\":{\"if\":{\"not\":{\"field\":\"location\",\"in\":[\"northeurope\",\"westeurope\"]}},\"then\":{\"effect\":\"Deny\"}}},\"id\":\"/providers/Microsoft.Authorization/policyDefinitions/94c19f19-8192-48cd-a11b-e37099d3e36b\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"94c19f19-8192-48cd-a11b-e37099d3e36b\"},{\"properties\":{\"displayName\":\"Allow resource creation only in United States data centers\",\"policyType\":\"BuiltIn\",\"description\":\"Allows resource creation in the following locations only: Central US, East US, East US2, North Central US, South Central US, West US\",\"policyRule\":{\"if\":{\"not\":{\"field\":\"location\",\"in\":[\"centralus\",\"eastus\",\"eastus2\",\"northcentralus\",\"southcentralus\",\"westus\"]}},\"then\":{\"effect\":\"Deny\"}}},\"id\":\"/providers/Microsoft.Authorization/policyDefinitions/983211ba-f348-4758-983b-21fa29294869\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"983211ba-f348-4758-983b-21fa29294869\"},{\"properties\":{\"displayName\":\"Allow resource creation if 'environment' tag value in allowed values\",\"policyType\":\"BuiltIn\",\"description\":\"Allows resource creation if the 'environment' tag is set to one of the following values: production, dev, test, staging\",\"policyRule\":{\"if\":{\"not\":{\"field\":\"tags.environment\",\"in\":[\"production\",\"dev\",\"test\",\"staging\"]}},\"then\":{\"effect\":\"Deny\"}}},\"id\":\"/providers/Microsoft.Authorization/policyDefinitions/ac7e5fc0-c029-4b12-91d4-a8500ce697f9\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"ac7e5fc0-c029-4b12-91d4-a8500ce697f9\"},{\"properties\":{\"displayName\":\"Allow resource creation only in Asia data centers\",\"policyType\":\"BuiltIn\",\"description\":\"Allows resource creation in the following locations only: East Asia, Southeast Asia, West India, South India, Central India, Japan East, Japan West\",\"policyRule\":{\"if\":{\"not\":{\"field\":\"location\",\"in\":[\"eastasia\",\"southeastasia\",\"westindia\",\"southindia\",\"centralindia\",\"japaneast\",\"japanwest\"]}},\"then\":{\"effect\":\"Deny\"}}},\"id\":\"/providers/Microsoft.Authorization/policyDefinitions/c1b9cbed-08e3-427d-b9ce-7c535b1e9b94\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"c1b9cbed-08e3-427d-b9ce-7c535b1e9b94\"},{\"properties\":{\"displayName\":\"Allow resource creation if 'department' tag set\",\"policyType\":\"BuiltIn\",\"description\":\"Allows resource creation only if the 'department' tag is set\",\"policyRule\":{\"if\":{\"not\":{\"field\":\"tags\",\"containsKey\":\"department\"}},\"then\":{\"effect\":\"Deny\"}}},\"id\":\"/providers/Microsoft.Authorization/policyDefinitions/cd8dc879-a2ae-43c3-8211-1877c5755064\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"cd8dc879-a2ae-43c3-8211-1877c5755064\"},{\"properties\":{\"displayName\":\"Allow resource creation only in Japan data centers\",\"policyType\":\"BuiltIn\",\"description\":\"Allows resource creation in the following locations only: Japan East, Japan West\",\"policyRule\":{\"if\":{\"not\":{\"field\":\"location\",\"in\":[\"japaneast\",\"japanwest\"]}},\"then\":{\"effect\":\"Deny\"}}},\"id\":\"/providers/Microsoft.Authorization/policyDefinitions/e01598e8-6538-41ed-95e8-8b29746cd697\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"e01598e8-6538-41ed-95e8-8b29746cd697\"},{\"properties\":{\"policyType\":\"Custom\",\"policyRule\":{\"if\":{\"not\":{\"field\":\"tags.costCenter\",\"in\":[\"department1\",\"department2\",\"department3\"]}},\"then\":{\"effect\":\"deny\"}}},\"id\":\"/subscriptions/9167af2d-c13e-4d34-9a57-8f37dba6ff31/providers/Microsoft.Authorization/policyDefinitions/CostCenterTagPolicy\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"CostCenterTagPolicy\"},{\"properties\":{\"policyType\":\"Custom\",\"policyRule\":{\"if\":{\"not\":{\"field\":\"tags.costCenter\",\"in\":[\"department1\",\"department2\",\"department3\"]}},\"then\":{\"effect\":\"deny\"}}},\"id\":\"/subscriptions/9167af2d-c13e-4d34-9a57-8f37dba6ff31/providers/Microsoft.Authorization/policyDefinitions/CostCenterTagPolicy2\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"CostCenterTagPolicy2\"},{\"properties\":{\"policyType\":\"Custom\",\"policyRule\":{\"if\":{\"field\":\"tags.costCenter\",\"equals\":\"department1\"},\"then\":{\"effect\":\"audit\"}}},\"id\":\"/subscriptions/9167af2d-c13e-4d34-9a57-8f37dba6ff31/providers/Microsoft.Authorization/policyDefinitions/department1AuditPolicy\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"department1AuditPolicy\"},{\"properties\":{\"displayName\":\"myNewPolicy\",\"policyType\":\"Custom\",\"policyRule\":{\"if\":{\"source\":\"action\",\"equals\":\"Microsoft.Storage/storageAccounts/write\"},\"then\":{\"effect\":\"deny\"}}},\"id\":\"/subscriptions/9167af2d-c13e-4d34-9a57-8f37dba6ff31/providers/Microsoft.Authorization/policyDefinitions/testPolicyDefinition\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"testPolicyDefinition\"},{\"properties\":{\"displayName\":\"blah\",\"policyType\":\"Custom\",\"description\":\"blah\",\"policyRule\":{\"if\":{\"source\":\"action\",\"equals\":\"Microsoft.Storage/storageAccounts/write\"},\"then\":{\"effect\":\"deny\"}}},\"id\":\"/subscriptions/9167af2d-c13e-4d34-9a57-8f37dba6ff31/providers/Microsoft.Authorization/policyDefinitions/testVivekNewPolicy\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"testVivekNewPolicy\"}]}", { 'cache-control': 'no-cache',
+  pragma: 'no-cache',
+  'content-length': '6282',
+  'content-type': 'application/json; charset=utf-8',
+  expires: '-1',
+  vary: 'Accept-Encoding',
+  'x-ms-request-id': 'westus:392c68ad-a4b4-4d2d-b99f-dccf66a6f39c',
+  'x-ms-ratelimit-remaining-subscription-reads': '14999',
+  'x-ms-correlation-request-id': '4660feb7-f3aa-45d9-a127-8aebd0298bc7',
+  'x-ms-routing-request-id': 'WESTUS:20160408T223701Z:4660feb7-f3aa-45d9-a127-8aebd0298bc7',
+  'strict-transport-security': 'max-age=31536000; includeSubDomains',
+  date: 'Fri, 08 Apr 2016 22:37:01 GMT' });
+ return result; },
+function (nock) { 
+var result = 
+nock('https://management.azure.com:443')
+  .delete('/subscriptions/9167af2d-c13e-4d34-9a57-8f37dba6ff31/providers/Microsoft.Authorization/policydefinitions/testPolicyDefinition?api-version=2015-10-01-preview')
+  .reply(200, "{\"properties\":{\"displayName\":\"myNewPolicy\",\"policyType\":\"Custom\",\"policyRule\":{\"if\":{\"source\":\"action\",\"equals\":\"Microsoft.Storage/storageAccounts/write\"},\"then\":{\"effect\":\"deny\"}}},\"id\":\"/subscriptions/9167af2d-c13e-4d34-9a57-8f37dba6ff31/providers/Microsoft.Authorization/policyDefinitions/testPolicyDefinition\",\"type\":\"Microsoft.Authorization/policyDefinitions\",\"name\":\"testPolicyDefinition\"}", { 'cache-control': 'no-cache',
+  pragma: 'no-cache',
+  'content-length': '395',
+  'content-type': 'application/json; charset=utf-8',
+  expires: '-1',
+  vary: 'Accept-Encoding',
+  'x-ms-request-id': 'westus:5fcaac1d-d1af-4443-a641-ff950464991f',
+  'x-ms-ratelimit-remaining-subscription-writes': '1198',
+  'x-ms-correlation-request-id': '6051f0de-7951-48cd-bea5-01cb1db61d54',
+  'x-ms-routing-request-id': 'WESTUS:20160408T223702Z:6051f0de-7951-48cd-bea5-01cb1db61d54',
+  'strict-transport-security': 'max-age=31536000; includeSubDomains',
+  date: 'Fri, 08 Apr 2016 22:37:01 GMT' });
  return result; }]];

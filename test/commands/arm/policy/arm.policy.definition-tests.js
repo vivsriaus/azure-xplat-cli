@@ -56,15 +56,21 @@ describe('arm', function () {
           policyDefinition.name.should.containEql('testPolicyDefinition');
           policyDefinition.displayName.should.containEql('myPolicy');
           policyDefinition.id.indexOf('testPolicyDefinition').should.be.above(-1);
-
-          suite.execute('policy definition list --json', function (result) {
+          
+          suite.execute('policy definition set -n %s -d %s --json', 'testPolicyDefinition', 'myNewPolicy', function (result) {
             result.exitStatus.should.equal(0);
-            var policyDefinitions = JSON.parse(result.text);
-            policyDefinitions.length.should.be.above(0);
+            var policyDefinition = JSON.parse(result.text);
+            policyDefinition.displayName.should.containEql('myNewPolicy');
 
-            suite.execute('policy definition delete %s -q --json', 'testPolicyDefinition', function (result) {
+            suite.execute('policy definition list --json', function (result) {
               result.exitStatus.should.equal(0);
-              done();
+              var policyDefinitions = JSON.parse(result.text);
+              policyDefinitions.length.should.be.above(0);
+              
+              suite.execute('policy definition delete %s -q --json', 'testPolicyDefinition', function (result) {
+                result.exitStatus.should.equal(0);
+                done();
+              });
             });
           });
         });

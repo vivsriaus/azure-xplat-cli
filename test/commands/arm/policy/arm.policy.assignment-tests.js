@@ -70,15 +70,21 @@ describe('arm', function () {
               policyAssignment.name.should.containEql('testPolicyAssignment');
               policyAssignment.policyDefinitionId.should.containEql(policyDefinitionId);
               policyAssignment.scope.should.containEql(scope);
-
-              suite.execute('policy assignment list --json', function (result) {
+              
+              suite.execute('policy assignment set -n %s -s %s -d %s --json', 'testPolicyAssignment', scope, 'myAssignment', function (result) {
                 result.exitStatus.should.equal(0);
-                var policyAssignments = JSON.parse(result.text);
-                policyAssignments.length.should.be.above(0);
-                
-                suite.execute('policy assignment delete -n %s -s %s -q --json', 'testPolicyAssignment', scope, function (result) {
+                var policyAssignment = JSON.parse(result.text);
+                policyAssignment.displayName.should.containEql('myAssignment');
+
+                suite.execute('policy assignment list --json', function (result) {
                   result.exitStatus.should.equal(0);
-                  done();
+                  var policyAssignments = JSON.parse(result.text);
+                  policyAssignments.length.should.be.above(0);
+                  
+                  suite.execute('policy assignment delete -n %s -s %s -q --json', 'testPolicyAssignment', scope, function (result) {
+                    result.exitStatus.should.equal(0);
+                    done();
+                  });
                 });
               });
             });

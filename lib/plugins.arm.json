@@ -50167,6 +50167,84 @@
               ]
             },
             {
+              "name": "set",
+              "description": "Updates a policy assignment",
+              "fullName": "policy assignment set",
+              "usage": "[options] <name> <scope>",
+              "filePath": "commands/arm/policy/policy.assignment._js",
+              "options": [
+                {
+                  "flags": "-v, --verbose",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-v",
+                  "long": "--verbose",
+                  "description": "use verbose output"
+                },
+                {
+                  "flags": "-vv",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "-vv",
+                  "description": "more verbose with debug output"
+                },
+                {
+                  "flags": "--json",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--json",
+                  "description": "use json output"
+                },
+                {
+                  "flags": "-n --name <name>",
+                  "required": -11,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-n",
+                  "long": "--name",
+                  "description": "the policy assignment name"
+                },
+                {
+                  "flags": "-p --policy-definition-id <policyDefinitionId>",
+                  "required": -27,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-p",
+                  "long": "--policy-definition-id",
+                  "description": "the fully qualified id of existing policy definition. For example: /subscriptions/{mySubId}/providers/Microsoft.Authorization/policyDefinitions/{myPolicy}. Use policy definition list to get a list of existing policy definitions. More information here: https://azure.microsoft.com/en-us/documentation/articles/resource-manager-policy/"
+                },
+                {
+                  "flags": "-s --scope <scope>",
+                  "required": -12,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-s",
+                  "long": "--scope",
+                  "description": "the scope for policy assignment. For example, /subscriptions/{mySubId}/resourceGroups/{myGroup}"
+                },
+                {
+                  "flags": "-d --display-name <display-name>",
+                  "required": -19,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-d",
+                  "long": "--display-name",
+                  "description": "the display name for policy assignment."
+                },
+                {
+                  "flags": "--subscription <subscription>",
+                  "required": -16,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--subscription",
+                  "description": "the subscription identifier"
+                }
+              ]
+            },
+            {
               "name": "list",
               "description": "Lists all the policy assignments in the subscription.",
               "fullName": "policy assignment list",
@@ -50352,6 +50430,92 @@
               "description": "Creates a new policy definition",
               "fullName": "policy definition create",
               "usage": "[options] <name> <policy>",
+              "filePath": "commands/arm/policy/policy.definition._js",
+              "options": [
+                {
+                  "flags": "-v, --verbose",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-v",
+                  "long": "--verbose",
+                  "description": "use verbose output"
+                },
+                {
+                  "flags": "-vv",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "-vv",
+                  "description": "more verbose with debug output"
+                },
+                {
+                  "flags": "--json",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--json",
+                  "description": "use json output"
+                },
+                {
+                  "flags": "-n --name <name>",
+                  "required": -11,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-n",
+                  "long": "--name",
+                  "description": "the policy definition name"
+                },
+                {
+                  "flags": "-p --policy <policy>",
+                  "required": -13,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-p",
+                  "long": "--policy",
+                  "description": "the rule for policy definition. This should be a path to a file name containing the rule. More information here: https://azure.microsoft.com/en-us/documentation/articles/resource-manager-policy/",
+                  "fileRelatedOption": true
+                },
+                {
+                  "flags": "--policy-string <policyString>",
+                  "required": -17,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--policy-string",
+                  "description": "a JSON-formatted string containing the policy rule."
+                },
+                {
+                  "flags": "-d --display-name <display-name>",
+                  "required": -19,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-d",
+                  "long": "--display-name",
+                  "description": "the display name for policy definition."
+                },
+                {
+                  "flags": "--description <description>",
+                  "required": -15,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--description",
+                  "description": "the description for policy definition."
+                },
+                {
+                  "flags": "--subscription <subscription>",
+                  "required": -16,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--subscription",
+                  "description": "the subscription identifier"
+                }
+              ]
+            },
+            {
+              "name": "set",
+              "description": "Updates a policy definition",
+              "fullName": "policy definition set",
+              "usage": "[options] <name>",
               "filePath": "commands/arm/policy/policy.definition._js",
               "options": [
                 {
