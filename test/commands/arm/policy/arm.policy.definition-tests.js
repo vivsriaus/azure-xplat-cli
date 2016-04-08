@@ -55,6 +55,7 @@ describe('arm', function () {
           var policyDefinition = JSON.parse(result.text);
           policyDefinition.name.should.containEql('testPolicyDefinition');
           policyDefinition.displayName.should.containEql('myPolicy');
+          policyDefinition.id.indexOf('testPolicyDefinition').should.be.above(-1);
 
           suite.execute('policy definition list --json', function (result) {
             result.exitStatus.should.equal(0);
