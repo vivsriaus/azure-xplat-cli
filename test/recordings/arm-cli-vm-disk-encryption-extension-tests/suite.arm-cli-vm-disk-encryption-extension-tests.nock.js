@@ -6,8 +6,8 @@ exports.getMockedProfile = function () {
   var newProfile = new profile.Profile();
 
   newProfile.addSubscription(new profile.Subscription({
-    id: '2c224e7e-3ef5-431d-a57b-e71f4662e3a6',
-    name: 'Node CLI Test',
+    id: '9135e259-1f76-4dbd-a5c8-bc4fcdf3cf1c',
+    name: 'RSA 2015 Demo',
     user: {
       name: 'user@domain.example',
       type: 'user'
@@ -23,7 +23,10 @@ exports.getMockedProfile = function () {
 };
 
 exports.setEnvironment = function() {
-  process.env['AZURE_VM_TEST_LOCATION'] = 'eastus';
+  process.env['AZURE_VM_TEST_LOCATION'] = 'westus';
+  process.env['SSHCERT'] = 'test/myCert.pem';
 };
 
 exports.scopes = [];
+
+ exports.randomTestIdsGenerated = function() { return ['xplatTestADE937','xplatteststorage15676','xplatteststoragecnt16148','xplattestipdns2291'];};
